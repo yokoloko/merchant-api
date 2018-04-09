@@ -2,14 +2,14 @@ version: '3.2'
 
 services:
   php:
-    container_name: php
+    container_name: igraal_php
     image: ${CONTAINER_REGISTRY_BASE}/php
     build:
       context: ./api
       cache_from:
         - ${CONTAINER_REGISTRY_BASE}/php
     depends_on:
-      - db
+      - db-igraal
     env_file:
       - ./api/.env
     # Comment out these volumes in production
@@ -46,14 +46,14 @@ services:
       - ./api/docker/varnish/conf:/etc/varnish:ro
     ports:
       - "8081:80"
-  db:
+  db-igraal:
     image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: api
-      MYSQL_USER: api
-      MYSQL_PASSWORD: api
+      MYSQL_DATABASE: igraal
+      MYSQL_USER: igraal
+      MYSQL_PASSWORD: igraal
     ports:
       - "3306:3306"
 
@@ -76,7 +76,6 @@ services:
     build:
       context: ./h2-proxy
     depends_on:
-      - client
       - admin
       - api
       - cache-proxy
@@ -99,6 +98,3 @@ services:
       - "5672:5672"
       - "15671:15671"
       - "15672:15672"
-
-volumes:
-  mysql: {}

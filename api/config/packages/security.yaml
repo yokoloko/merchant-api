@@ -1,5 +1,11 @@
 security:
-    encoders:
     providers:
+        in_memory: { memory: ~ }
+    encoders:
+        App\Entity\User: md5
     firewalls:
-
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: ~

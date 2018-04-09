@@ -24,3 +24,7 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
                 alias: App
+services:
+    App\DataFixtures\:
+        resource: '../../src/DataFixtures'
+        tags: [doctrine.fixture.orm]
