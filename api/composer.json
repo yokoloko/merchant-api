@@ -16,7 +16,9 @@
     },
     "require-dev": {
         "api-platform/schema-generator": "^2.1",
-        "doctrine/doctrine-fixtures-bundle": "^3.0"
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
+        "phpunit/phpunit": "^7.1",
+        "symfony/phpunit-bridge": "^3.4"
     },
     "config": {
         "preferred-install": {

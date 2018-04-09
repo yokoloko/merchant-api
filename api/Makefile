@@ -12,3 +12,5 @@ database:
 fixtures:
 	docker exec -it igraal_php bin/console doctrine:fixtures:load -n
 
+test:
+	docker exec -it igraal_php php bin/phpunit
