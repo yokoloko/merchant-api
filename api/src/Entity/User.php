@@ -96,7 +96,7 @@ class User implements UserInterface
      * @param
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -187,14 +187,14 @@ class User implements UserInterface
      */
     public function setLastLogin(?\DateTime $lastLogin): User
     {
-        $this->lastlLgin = $lastLogin;
+        $this->lastLogin = $lastLogin;
         return $this;
     }
 
     /**
      * @return \DateTime
      */
-    public function getCreationDate(): \DateTime
+    public function getCreationDate(): ?\DateTime
     {
         return $this->creationDate;
     }

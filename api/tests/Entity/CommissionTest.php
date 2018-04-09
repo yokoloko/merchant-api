@@ -5,7 +5,6 @@ namespace Tests\App\Entity;
 use App\Entity\Commission;
 use App\Entity\Merchant;
 use App\Entity\User;
-use AppBundle\Entity\Address;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -33,19 +32,19 @@ class CommissionTest extends TestCase
         $this->assertEquals(null, $entity->getId());
 
         $this->assertEquals(null, $entity->getUser());
-        $this->assertInstanceOf(Commission::class, $user);
+        $this->assertInstanceOf(Commission::class, $entity->setUser($user));
         $this->assertEquals($user, $entity->getUser());
 
         $this->assertEquals(null, $entity->getMerchant());
-        $this->assertInstanceOf(Commission::class, $merchant);
+        $this->assertInstanceOf(Commission::class, $entity->setMerchant($merchant));
         $this->assertEquals($merchant, $entity->getMerchant());
 
         $this->assertEquals(null, $entity->getCashback());
-        $this->assertInstanceOf(Commission::class, 1);
+        $this->assertInstanceOf(Commission::class, $entity->setCashback('1'));
         $this->assertEquals(1, $entity->getCashback());
 
         $this->assertEquals(null, $entity->getDate());
-        $this->assertInstanceOf(Commission::class, $date);
+        $this->assertInstanceOf(Commission::class, $entity->setDate($date));
         $this->assertEquals($date, $entity->getDate());
     }
 }

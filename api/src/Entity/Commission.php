@@ -61,7 +61,7 @@ class Commission
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -69,7 +69,7 @@ class Commission
     /**
      * @return \DateTime
      */
-    public function getDate(): \DateTime
+    public function getDate(): ?\DateTime
     {
         return $this->date;
     }
@@ -87,7 +87,7 @@ class Commission
     /**
      * @return string
      */
-    public function getCashback(): string
+    public function getCashback(): ?string
     {
         return $this->cashback;
     }
