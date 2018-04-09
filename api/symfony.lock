@@ -14,9 +14,6 @@
     "api-platform/schema-generator": {
         "version": "v2.1.0-beta.1"
     },
-    "bernard/bernard": {
-        "version": "v0.12.4"
-    },
     "composer/semver": {
         "version": "1.4.2"
     },
@@ -119,36 +116,6 @@
     "league/html-to-markdown": {
         "version": "4.6.2"
     },
-    "league/tactician": {
-        "version": "v1.0.3"
-    },
-    "league/tactician-bundle": {
-        "version": "1.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
-            "version": "1.0",
-            "ref": "222c3d39d38378bc6a9790a0b5baf841ba6679b9"
-        }
-    },
-    "league/tactician-container": {
-        "version": "2.0.0"
-    },
-    "league/tactician-logger": {
-        "version": "v0.10.0"
-    },
-    "lexik/jwt-authentication-bundle": {
-        "version": "2.3",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "2.3",
-            "ref": "a66e8a7b75a1825cf2414d5dd53c7ed38c8654d1"
-        }
-    },
-    "namshi/jose": {
-        "version": "7.2.3"
-    },
     "nelmio/cors-bundle": {
         "version": "1.5",
         "recipe": {
@@ -163,18 +130,6 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.2.0"
-    },
-    "php-amqplib/php-amqplib": {
-        "version": "v2.7.2"
-    },
-    "php-amqplib/rabbitmq-bundle": {
-        "version": "1.12",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
-            "version": "1.12",
-            "ref": "ce3ca2e4577270c4f518539aa6b9e878998fcfef"
-        }
     },
     "php-cs-fixer/diff": {
         "version": "v1.2.0"
