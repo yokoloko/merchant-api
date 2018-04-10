@@ -3,7 +3,7 @@ vcl 4.0;
 import std;
 
 backend default {
-  .host = "localhost";
+  .host = "api";
   .port = "80";
   # Health check
   #.probe = {
@@ -19,6 +19,7 @@ backend default {
 acl ban {
   "localhost";
   "php";
+  "igraal_php";
 }
 
 sub vcl_backend_response {

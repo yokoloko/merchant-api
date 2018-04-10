@@ -1,0 +1,6 @@
+swiftmailer:
+    transport: "smtp"
+    host:      "mailhog"
+    port:      "1025"
+    username:  ""
+    password:  ""
