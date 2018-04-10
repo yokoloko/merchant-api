@@ -1,10 +1,10 @@
 This project use api-platform intensively and is mainly inspired by it's skeleton.
 
-To use this project
+To start using this project `docker-compose up`
 
-`docker-compose up`
+If you want to load the database ``cd api && make database && make fixtures`
 
-Api is available at `localhost:8080`
+The api is available at `localhost:8080`
 
 `sudo echo api 127.0.0.1 >> /etc/hosts`
 Api behind a Varnish reply under 5 ms at `api:8081`
