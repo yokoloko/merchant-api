@@ -66,13 +66,6 @@ class SuccessSubscriber implements EventSubscriberInterface
             ->setBody('xoxo');
 
         $this->mailer->send($message);
-
-        $this->entityManager
-            ->getRepository(User::class)
-            ->findOneBy(['email' => 'elodie@test.com'])
-            ->setCreationDate(new \DateTime('now'));
-
-        $this->entityManager->flush();
     }
 
     /**

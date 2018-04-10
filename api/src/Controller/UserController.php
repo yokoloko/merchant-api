@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 /**
  * @Route("/")
  */
-class UserController extends Controller
+class UserController
 {
     /**
      * @Route(
