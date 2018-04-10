@@ -14,7 +14,7 @@ class SetHeaderSubscriber implements EventSubscriberInterface
     public function onKernelResponse(FilterResponseEvent $event):void
     {
         if ($event->getRequest()->isMethod('GET')) {
-            // $event->getResponse()->headers->set('Generation-Date', (new \DateTime())->format('Y-m-d H:i:is'));
+            $event->getResponse()->headers->set('Generation-Date', (new \DateTime())->format('Y-m-d H:i:is'));
         }
     }
 
