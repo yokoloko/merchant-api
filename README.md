@@ -1,6 +1,6 @@
 This project use api-platform intensively and is mainly inspired by it's skeleton.
 
-To start using this project `docker-compose up`
+To start using this project `make up`
 
 If you want to load the database ``cd api && make database && make fixtures`
 
