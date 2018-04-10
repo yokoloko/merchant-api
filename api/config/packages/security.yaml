@@ -1,0 +1,25 @@
+security:
+    encoders:
+    # you probably don't want to do this in production ... but the password is limited to 64 characters
+        App\Entity\User: md5
+    providers:
+        doctrine_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+    firewalls:
+        login:
+            pattern:  ^/user/login
+            stateless: true
+            provider: doctrine_provider
+            anonymous: true
+            form_login:
+                check_path:               /user/login
+                success_handler:          lexik_jwt_authentication.handler.authentication_success
+                failure_handler:          lexik_jwt_authentication.handler.authentication_failure
+                require_previous_session: false
+
+
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
