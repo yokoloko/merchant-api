@@ -1,3 +1,3 @@
 up:
 	docker-compose up -d --remove-orphans
-	(cd api && make database && make fixtures)
+	(cd api && make composer-install && make database && make fixtures)

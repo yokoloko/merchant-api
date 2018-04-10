@@ -1,6 +1,9 @@
 consume-event:
 	docker exec igraal_php bin/console rabbitmq:consumer event
 
+composer-install:
+	docker exec igraal_php composer install
+
 composer-update:
 	docker exec igraal_php composer update
 
